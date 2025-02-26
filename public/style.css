@@ -4,45 +4,69 @@
 }
 
 body{
-   background-color: #121212;
+   background-color: #060606;
+   height: 100%;
+   overflow-y: auto; 
+   -ms-overflow-style: none;
+   scrollbar-width: none;
 }
 
+html{
+   height: 100%;
+   overflow-y: auto; 
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+   display: none;
+}
+
+
 .sendMsg {
+   margin-top: 1rem;
    width: 100%;
    height: 9vh;
    display: flex;
    align-items: center;
-   justify-content: space-between; /* Ensure input and button stay in one row */
+   justify-content: center;
+   ;
    position: absolute;
    bottom: 0;
-   background-color: #121212;
-   padding: 0.5rem;
+   background: #000000;
+   
 }
 
 #message {
-   flex-grow: 1; /* Takes remaining space */
+   flex-grow: 1;
    height: 75%;
    border-radius: 20px;
    border: none;
    padding-left: 1rem;
-   font-size: 1rem;
-   margin-right: 0.5rem;
+   font-size: 1.2rem;
+   margin-left: 0;
+   background-color: #282727;
+   color: #fff;
+   transform: scale(0.9);
+}
+#messages{
+   padding-bottom: 60px; 
 }
 
 
 #sendBtn {
-   height: 80%;
+   height: 74%;
    width: 8%;
-   min-width: 60px; /* Prevents the button from becoming too small */
-   max-width: 80px; /* Keeps it reasonable on larger screens */
+   min-width: 120px; 
+   max-width: 110px; 
    border-radius: 20px;
-   margin-right: 0.5rem;
    border: none;
-   font-size: 1rem;
-   background: linear-gradient(45deg, #0580fb, #951ffd, #fb4456);
+   font-size: 1.2rem;
+   background: #0ada0a;
    color: #fff;
    opacity: 0.8;
-   white-space: nowrap; /* Prevents text from wrapping */
+   white-space: nowrap;
+   transform: scale(0.9);
 }
 
 #sendBtn:hover {
@@ -51,8 +75,8 @@ body{
 
 .para{
    padding: 0.5rem;
-   margin: 0.5rem;
-   
+   margin: 1rem;
+   transform: scale(1.1);
    display: block;
    width: fit-content;
    color: #fff;
@@ -60,7 +84,7 @@ body{
 
 
 .incoming {
-   background: linear-gradient(45deg, #3a9dff, #ff6070	);
+   background: #29292992;
    text-align: left;
    border-top-right-radius: 15px;
    border-bottom-right-radius: 15px;
@@ -68,7 +92,7 @@ body{
 }
 
 .outgoing {
-   background: linear-gradient(45deg,#FF6070, #3a9cff);
+   background: #03602e;
    text-align: right;
    margin-left: auto;
    border-top-left-radius: 15px;
@@ -89,7 +113,7 @@ body{
 
    #sendBtn {
       font-size: 0.9rem;
-      width: 25%;
+      width: 20%;
    }
 
    .para {
@@ -98,23 +122,4 @@ body{
    }
 }
 
-/* Message Input Section */
 
-
-@media (max-width: 600px) {
-   .sendMsg {
-      height: 10vh;
-      padding: 0.3rem;
-   }
-
-   #message {
-      font-size: 0.9rem;
-      padding-left: 0.8rem;
-   }
-
-   #sendBtn {
-      font-size: 0.9rem;
-      width: 22%; /* Adjust for small screens */
-      max-width: 70px;
-   }
-}
