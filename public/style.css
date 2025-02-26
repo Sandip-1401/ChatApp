@@ -57,7 +57,7 @@ html::-webkit-scrollbar {
 #sendBtn {
    height: 74%;
    width: 8%;
-   min-width: 120px; 
+   min-width: 60px; 
    max-width: 110px; 
    border-radius: 20px;
    border: none;
